@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <nav>
+    <h1>Task Manager</h1>
+    <div class="theme-selector-container">
+        <label for="theme-selector">Theme Swap:</label>
+        <select id="theme-selector" onchange="changeTheme(this.value)">
+            <option value="default">Default</option>
+            <option value="darkblue">Dark Blue</option>
+            <option value="darkred">Dark Red</option>
+            <option value="darkgreen">Dark Green</option>
+            <option value="darkpurple">Dark Purple</option>
+        </select>
+    </div>
+    </nav>
+
+    <div class="app-container">
+        <input type="text" id="new-task" placeholder="Describe Task">
+        <input type="date" id="due-date">
+        <input type="time" id="due-time">
+        <select id="priority">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="toggleTasks()">Show/Hide Tasks</button>
+        <button onclick="toggleCompletedTasks()">Show/Hide Completed Tasks</button>
+        <button onclick="checkTasks()">Check Tasks</button>
+        <ul id="task-list"></ul>
+        <ul id="completed-task-list" class="hidden"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Diabolic Curiosity.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

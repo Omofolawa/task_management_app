@@ -1,0 +1,105 @@
+:root {
+    --background-color: #ffffff;
+    --primary-color: #2980b9;
+    --text-color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-selector-container {
+    position: relative;
+    display: inline-block;
+}
+
+.theme-selector-container select {
+    width: 100px; /* Adjust width as needed */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below selector */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.theme-selector-container:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+button:nth-child(4) {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    margin: 5px; /* Add some space around the button */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+li input[type="text"] {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    width: 60%;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
